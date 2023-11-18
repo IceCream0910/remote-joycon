@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Control</title>
+    <link rel="stylesheet" href="style.css?v=231115">
+
+</head>
+
+<body>
+    <div id="orientationMessage">가로로 회전해주세요</div>
+    <div class="switch" id="switch">
+
+        <div class="joy-con left">
+            <div class="button-group">
+                <div class="button arrow up" ontouchstart="send('up')" ontouchend=""></div>
+                <div class="button arrow right" style="left: 80px" ontouchstart="send('right')" ontouchend=""></div>
+                <div class="button arrow down" style="top: 80px" ontouchstart="send('down')" ontouchend="">
+                </div>
+                <div class="button arrow left" ontouchstart="send('left')" ontouchend=""></div>
+            </div>
+
+            <div class="stick" id="leftJoyStick" onclick="send('f')"></div>
+            <div class="select" ontouchstart="send('n')" ontouchend=""></div>
+            <div class="capture" ontouchstart="connectToPC()" ontouchend=""></div>
+            <div class="shoulder l" onclick="send('r')" ontouchend=""></div>
+        </div>
+
+        <div class="joy-con right">
+            <div class="button-group">
+                <div class="button letter" data-letter="X" ontouchstart="send('v')" ontouchend=""></div>
+                <div class="button letter" data-letter="A" style="left: 80px" ontouchstart="send('c')" ontouchend="">
+                </div>
+                <div class="button letter" data-letter="B" style="top: 80px" ontouchstart="send('x')" ontouchend="">
+                </div>
+                <div class="button letter" data-letter="Y" ontouchstart="send('z')" ontouchend=""></div>
+            </div>
+
+            <div class="stick" id="rightJoyStick" onclick="send('g')"></div>
+            <div class="start" ontouchstart="send('m')" ontouchend=""></div>
+            <div class="home" ontouchstart="send('h')" ontouchend=""></div>
+            <div class="shoulder r" onclick="send('t')" ontouchend=""></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.1/dist/nipplejs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="index.js?v=231115_01"></script>
+</body>
+
+</html>
