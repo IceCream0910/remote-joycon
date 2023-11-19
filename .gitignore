@@ -1,2 +1,2 @@
 *.xci
-/build
+build/
